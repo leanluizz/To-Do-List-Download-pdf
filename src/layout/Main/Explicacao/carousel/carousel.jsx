@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Icon from '../../../../components/ui/Icon/icon';
 
 //Videos
 import Titulo from '../videos/titulo.mp4';
@@ -87,23 +88,19 @@ function PlayVideo(num) {
   
 
   return (
-    <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
+    <Carousel interval={null} activeIndex={index} onSelect={handleSelect} style={{ position: 'relative', zIndex: 0 }}>
       {data.map((item, i) => (
         <Carousel.Item key={i}>
           <div>
             <div className='m-5 d-flex align-items-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="green" className="bi bi-collection-play-fill" viewBox="0 0 16 16">
-                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437"/>
-              </svg>
+              <Icon name="VideoCameraIcon" style="solid" size={50} className="text-success" />
               <h4 className='m-2 text-start'>{item.title}</h4>
             </div>
             <div className='video-container p-5'>
-              <video className='w-100' id='tutorial-titulo'>
+              <video className='w-100 rounded' id='tutorial-titulo'>
                 <source src={item.src} type="video/mp4" />
               </video>
-              <svg onClick={() => PlayVideo(i)} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="black" className="play-icon bi bi-play-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
-              </svg>
+              <Icon onClick={() => PlayVideo(i)} name="PlayCircleIcon" style="solid" size={50} className="play-icon text-dark" />
             </div>
           </div>
         </Carousel.Item>
