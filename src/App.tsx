@@ -4,10 +4,10 @@ import './assets/styles/tags.css';
 import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/homePage';
 import { Suspense, lazy } from 'react';
-const CreatePage = lazy(() => import('./pages/CreatePage'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const CreatePage = lazy(() => import('./pages/createPage'));
+const PrivacyPolicy = lazy(() => import('./pages/privacyPolicy'));
 
 export default function App() {
   return (

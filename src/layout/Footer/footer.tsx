@@ -9,7 +9,7 @@ export default function Footer({icon}: FooterProps){
     }
     return(
         <>
-        <footer className="site-footer bg-dark text-light mt-5">
+        <footer className="site-footer bg-dark text-light">
           <div className="container py-4">
             <div className="row align-items-start">
               <div className="col-12 col-lg-4 mb-3">
@@ -23,6 +23,7 @@ export default function Footer({icon}: FooterProps){
                   <a onClick={() => scrollToSection('tutorial')} className="cursor-pointer mb-2">Como usar</a>
                   <a onClick={() => scrollToSection('duvidas')} className="cursor-pointer mb-2">Ajuda</a>
                   <a href="/criar" className="mb-2">Criar lista</a>
+                  <a href="/privacidade" className="mb-2">Políticas e privacidade</a>
                 </div>
               </div>
               <div className="col-6 col-lg-4 mb-3">

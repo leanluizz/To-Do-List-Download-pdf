@@ -1,10 +1,8 @@
-//UI
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-export default function Duvidas(){
+export default function Faq(){
     return(
         <>
-        <div id='duvidas' className='m-lg-5 my-12 text-center text-lg-start'>
+        <div id='faq' className='m-lg-5 my-2 text-center text-lg-start'>
         <h2 className='space-mobile'>Dúvidas</h2>
         <div className='m-5'>
         <h4 className='text-start'>O que é o Tasks?</h4>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ModalBody } from 'react-bootstrap';
-import Button from '../../components/ui/Button/button.tsx';
+import Button from '../../components/ui/Button/button';
 import Modal from 'react-bootstrap/Modal';
 
 

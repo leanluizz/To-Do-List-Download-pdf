@@ -4,6 +4,19 @@ import Center from '../images-icons/alinhamento-center.png';
 import Start from '../images-icons/alinhamento-start.png';
 import End from '../images-icons/alinhamento-end.png';
 import IconButton from '../../../components/ui/IconButton/icon-button';
+import { ChangeEvent } from 'react';
+interface TopToolbarProps {
+  changeColor: (v: string) => void;
+  changeSize: (e: ChangeEvent<HTMLInputElement>) => void;
+  changeFont: (v: string) => void;
+  changeAlign: (v: string) => void;
+  changeBackground: (e: ChangeEvent<HTMLInputElement>) => void;
+  generatePDF: () => void;
+  textSize: number;
+  fontText: string;
+  alignText: string;
+  textColor: string;
+}
 
 export default function TopToolbar({
   changeColor,
@@ -11,19 +24,19 @@ export default function TopToolbar({
   changeFont,
   changeAlign,
   changeBackground,
-  gerarPDF,
+  generatePDF,
   textSize,
-  FontText,
+  fontText,
   alignText,
   textColor,
-}) {
+}: TopToolbarProps) {
   return (
-    <section>
-      <div className="d-none d-lg-flex align-items-center justify-content-around gap-4 bg-gradient border border-1 border-success">
+    <section className="position-sticky top-0 z-3 mb-3">
+      <div className="d-none d-lg-flex align-items-center justify-content-around gap-4 bg-gradient border border-1 border-primary-color">
         <Dropdown
           title={'Alterar cor da lista'}
           buttonTitle={'Alterar cor da lista'}
-          icon={<Icon name="PaintBrushIcon" size={25} className="text-success" />}
+          icon={<Icon name="PaintBrushIcon" size={25} className="text-primary-color" />}
           placement={'bottom'}
           panelStyle={{ minWidth: 150 }}
           content={
@@ -51,7 +64,7 @@ export default function TopToolbar({
         <Dropdown
           title={'Alterar tamanho'}
           buttonTitle={'Alterar tamanho'}
-          icon={<Icon name="ArrowsUpDownIcon" size={25} className="text-success" />}
+          icon={<Icon name="PlusIcon" size={25} className="text-primary-color" />}
           placement={'bottom'}
           content={
             <div className="d-flex flex-column gap-2">
@@ -63,43 +76,43 @@ export default function TopToolbar({
         <Dropdown
           title={'Alterar fonte'}
           buttonTitle={'Alterar fonte'}
-          icon={<Icon name="DocumentTextIcon" size={25} className="text-success" />}
+          icon={<Icon name="DocumentTextIcon" size={25} className="text-primary-color" />}
           placement={'bottom'}
           content={
             <>
               <div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('cursive')} type="radio" name="exampleRadio" id="exampleRadio1" checked={FontText === 'cursive'} readOnly />
+                  <input onClick={() => changeFont('cursive')} type="radio" name="exampleRadio" id="exampleRadio1" checked={fontText === 'cursive'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontFamily: 'cursive' }}>
                     Cursive
                   </p>
                 </div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('fantasy')} type="radio" name="exampleRadio" id="exampleRadio2" checked={FontText === 'fantasy'} readOnly />
+                  <input onClick={() => changeFont('fantasy')} type="radio" name="exampleRadio" id="exampleRadio2" checked={fontText === 'fantasy'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontFamily: 'fantasy' }}>
                     Fantasy
                   </p>
                 </div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('monospace')} type="radio" name="exampleRadio" id="exampleRadio3" checked={FontText === 'monospace'} readOnly />
+                  <input onClick={() => changeFont('monospace')} type="radio" name="exampleRadio" id="exampleRadio3" checked={fontText === 'monospace'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontFamily: 'monospace' }}>
                     Monospace
                   </p>
                 </div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('sans-serif')} type="radio" name="exampleRadio" id="exampleRadio4" checked={FontText === 'sans-serif'} readOnly />
+                  <input onClick={() => changeFont('sans-serif')} type="radio" name="exampleRadio" id="exampleRadio4" checked={fontText === 'sans-serif'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontFamily: 'sans-serif' }}>
                     Sans-Serif
                   </p>
                 </div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('serif')} type="radio" name="exampleRadio" id="exampleRadio5" checked={FontText === 'serif'} readOnly />
+                  <input onClick={() => changeFont('serif')} type="radio" name="exampleRadio" id="exampleRadio5" checked={fontText === 'serif'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontFamily: 'serif' }}>
                     Serif
                   </p>
                 </div>
                 <div className="d-flex align-items-center cursor-pointer">
-                  <input onClick={() => changeFont('italic')} type="radio" name="exampleRadio" id="exampleRadio6" checked={FontText === 'italic'} readOnly />
+                  <input onClick={() => changeFont('italic')} type="radio" name="exampleRadio" id="exampleRadio6" checked={fontText === 'italic'} readOnly />
                   <p className="mb-0 ms-2" style={{ fontStyle: 'italic' }}>
                     Italic
                   </p>
@@ -108,11 +121,11 @@ export default function TopToolbar({
             </>
           }
         />
-        <IconButton style='outline' title='Gerar PDF' onClick={gerarPDF} name="DocumentArrowDownIcon" size={25} className="text-success cursor-pointer d-inline-flex align-items-center justify-content-center" />
+        <IconButton style='outline' title='Gerar PDF' onClick={generatePDF} name="DocumentArrowDownIcon" size={25} className="text-primary-color cursor-pointer d-inline-flex align-items-center justify-content-center" />
         <Dropdown
           title={'Alinhamento'}
           buttonTitle={'Alinhamento'}
-          icon={<Icon name="ListBulletIcon" size={25} className="text-success" />}
+          icon={<Icon name="ListBulletIcon" size={25} className="text-primary-color" />}
           placement="bottom"
           content={
             <div className="d-flex">
@@ -123,8 +136,8 @@ export default function TopToolbar({
           }
         />
         <input onChange={changeBackground} type="file" name="wallpaper" id="wallpaper" className="d-none" />
-        <label htmlFor="wallpaper" className="d-inline-flex align-items-center justify-content-center">
-          <Icon name="PhotoIcon" size={25} className="text-success cursor-pointer d-inline-flex align-items-center justify-content-center" />
+        <label htmlFor="wallpaper" className="d-inline-flex align-items-center justify-content-center" title="Plano de fundo">
+          <Icon name="PhotoIcon" size={25} className="text-primary-color cursor-pointer d-inline-flex align-items-center justify-content-center" />
         </label>
       </div>
     </section>

@@ -4,6 +4,7 @@ type ButtonProps = {
   variant?: string;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  title?: string;
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   href?: string;
@@ -14,6 +15,7 @@ export default function Button({
   variant,
   className,
   type = 'button',
+  title,
   disabled,
   onClick,
   href,
@@ -32,7 +34,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={classes} disabled={disabled} onClick={onClick}>
+    <button title={title} type={type} className={classes} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );

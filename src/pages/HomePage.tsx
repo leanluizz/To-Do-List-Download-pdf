@@ -1,5 +1,4 @@
 import Header from '../layout/Header/header';
-// @ts-ignore
 import Main from '../layout/Main/main';
 import Footer from '../layout/Footer/footer';
 
