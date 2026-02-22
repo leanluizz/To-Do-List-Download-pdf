@@ -1,6 +1,6 @@
 import Icon from '../../../../components/ui/Icon/Icon';
 import Card from '../../../../components/ui/Card/Card';
-import IntersectionObserver from '../../../../utils/intersectionobserver';
+import IntersectionObserver from '../../../../utils/IntersectionObserver';
 import Titulo from '../videos/titulo.mp4';
 import CRUD from '../videos/crud.mp4';
 import Cor from '../videos/cor.mp4';

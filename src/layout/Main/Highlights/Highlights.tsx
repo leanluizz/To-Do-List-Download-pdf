@@ -1,6 +1,6 @@
 import Icon from '../../../components/ui/Icon/Icon';
 import Card from '../../../components/ui/Card/Card';
-import IntersectionObserver from 'utils/intersectionobserver';
+import IntersectionObserver from '../../../utils/IntersectionObserver';
 import 'animate.css';
 
 export default function Highlights() {
