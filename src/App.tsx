@@ -5,9 +5,9 @@ import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import HomePage from './pages/homePage';
-const CreatePage = lazy(() => import('./pages/createPage'));
-const PrivacyPolicy = lazy(() => import('./pages/privacyPolicy'));
+import HomePage from './pages/HomePage';
+const CreatePage = lazy(() => import('./pages/CreatePage'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
 export default function App() {
   return (
