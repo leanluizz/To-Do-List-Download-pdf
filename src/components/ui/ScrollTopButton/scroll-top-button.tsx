@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import 'animate.css';
-import Icon from '../icon/icon';
+import Icon from '../Icon/icon';
 
 export interface ScrollTopButtonProps {
   threshold?: number;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../../../components/ui/button/button";
+import Button from "../../../components/ui/Button/button";
 export default function Intro(){
     return(
         <section className="intro p-3 bg-intro d-lg-flex align-items-center justify-content-around">

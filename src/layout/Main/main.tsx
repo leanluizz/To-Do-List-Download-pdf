@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
-import Intro from './introducao/intro';
-import Explain from './explicacao/explain';
-import Example from './explicacao/example';
-import Faq from './duvidas/faq';
-import About from './sobre/about';
-import Highlights from './destaques/highlights';
-import ScrollTopButton from '../../components/ui/scrollTopButton/scroll-top-button';
+import Intro from './Introducao/intro';
+import Explain from './Explicacao/explain';
+import Example from './Explicacao/example';
+import Faq from './Duvidas/faq';
+import About from './Sobre/about';
+import Highlights from './Destaques/highlights';
+import ScrollTopButton from '../../components/ui/ScrollTopButton/scroll-top-button';
 export default function Main(){
     return (
         <main style={{gap:'200px'}} className="d-flex flex-column">

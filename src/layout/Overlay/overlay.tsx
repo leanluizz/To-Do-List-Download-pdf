@@ -1,4 +1,4 @@
-import Button from '../../components/ui/button/button';
+import Button from '../../components/ui/Button/button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import { OverlayProps } from '../../types';

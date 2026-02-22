@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import IconButton from '../../../components/ui/iconButton/icon-button';
+import IconButton from '../../../components/ui/IconButton/icon-button';
 interface AddItemInputProps {
   values?: string;
   value?: string;

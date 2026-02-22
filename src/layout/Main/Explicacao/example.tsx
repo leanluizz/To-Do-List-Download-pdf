@@ -1,5 +1,5 @@
 import GridVideos from './gridVideos/gridvideos';
-import Button from '../../../components/ui/button/button';
+import Button from '../../../components/ui/Button/button';
 export default function Example (){
     return(
         <section className='z-0' id='tutorial'>
