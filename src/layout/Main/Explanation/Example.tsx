@@ -1,4 +1,4 @@
-import GridVideos from './gridVideos/gridvideos';
+import GridVideos from './gridVideos/GridVideos';
 import Button from '../../../components/ui/Button/Button';
 export default function Example (){
     return(
