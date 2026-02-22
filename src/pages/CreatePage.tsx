@@ -1,4 +1,4 @@
-import CreateLists from '../layout/Feature/createLists';
+import CreateLists from '../layout/Feature/CreateLists';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/ui/Button/button';
 import Icon from '../components/ui/Icon/icon';
