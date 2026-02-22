@@ -1,6 +1,6 @@
-import Header from '../layout/header/header';
-import Main from '../layout/main/main';
-import Footer from '../layout/footer/footer';
+import Header from '../layout/Header/header';
+import Main from '../layout/Main/main';
+import Footer from '../layout/Footer/footer';
 
 export default function HomePage() {
   return (
