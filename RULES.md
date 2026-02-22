@@ -9,8 +9,7 @@ Estas são as diretrizes fundamentais para o desenvolvimento e manutenção dest
   - Definições de tipos: `src/types`
   - Utilitários e helpers: `src/utils`
   - Recursos estáticos (imagens/estilos): `src/assets`
-- **Nomenclatura de Arquivos**: Use `camelCase` iniciando com letra minúscula (ex.: `criarListas.jsx`, `icon.tsx`, `button.tsx`).
-- **Tamanho de Arquivos**: Mantenha arquivos com menos de 400 linhas. Se exceder, divida em componentes menores para melhor manutenção e separação de responsabilidades.
+  - **Tamanho de Arquivos**: Mantenha arquivos com menos de 400 linhas. Se exceder, divida em componentes menores para melhor manutenção e separação de responsabilidades.
 
 ## Código e Estilo
 - **Indentação**: Código bem indentado e legível, utilizando 2 espaços por nível.

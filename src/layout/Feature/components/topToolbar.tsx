@@ -3,7 +3,7 @@ import Icon from '../../../components/ui/Icon/Icon';
 import Center from '../images-icons/alinhamento-center.png';
 import Start from '../images-icons/alinhamento-start.png';
 import End from '../images-icons/alinhamento-end.png';
-import IconButton from '../../../components/ui/IconButton/icon-button';
+import IconButton from '../../../components/ui/IconButton/IconButton';
 import { ChangeEvent } from 'react';
 interface TopToolbarProps {
   changeColor: (v: string) => void;

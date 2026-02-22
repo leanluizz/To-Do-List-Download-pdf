@@ -1,4 +1,4 @@
-import IconButton from '../../../components/ui/IconButton/icon-button';
+import IconButton from '../../../components/ui/IconButton/IconButton';
 import Icon from '../../../components/ui/Icon/Icon';
 import 'animate.css';
 import 'animate.css';
