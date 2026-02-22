@@ -1,9 +1,9 @@
-import Dropdown from '../../../components/ui/Dropdown/dropdown';
-import Icon from '../../../components/ui/Icon/icon';
+import Dropdown from '../../../components/ui/dropdown/dropdown';
+import Icon from '../../../components/ui/icon/icon';
 import Center from '../images-icons/alinhamento-center.png';
 import Start from '../images-icons/alinhamento-start.png';
 import End from '../images-icons/alinhamento-end.png';
-import IconButton from '../../../components/ui/IconButton/icon-button';
+import IconButton from '../../../components/ui/iconButton/icon-button';
 import { ChangeEvent } from 'react';
 interface TopToolbarProps {
   changeColor: (v: string) => void;

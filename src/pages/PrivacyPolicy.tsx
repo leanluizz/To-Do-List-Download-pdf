@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import Icon from '../components/ui/Icon/icon';
+import Icon from '../components/ui/icon/icon';
 
 export default function PrivacyPolicy() {
   const navigate = useNavigate();

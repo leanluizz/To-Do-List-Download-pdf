@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from 'react';
-import Icon, { IconName } from '../Icon/icon';
+import Icon, { IconName } from '../icon/icon';
 
 export interface IconButtonProps {
   name: IconName;

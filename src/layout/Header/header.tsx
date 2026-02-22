@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Icon from './Icon/icon';
-import Nav from './Nav/nav';
+import Icon from './icon/icon';
+import Nav from './nav/nav';
 
 export default function Header(){
     return(
