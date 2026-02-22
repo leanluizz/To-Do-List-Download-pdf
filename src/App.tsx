@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import HomePage from 'pages/homePage';
-const CreatePage = lazy(() => import('./pages/createPage'));
-const PrivacyPolicy = lazy(() => import('./pages/privacyPolicy'));
+const CreatePage = lazy(() => import('pages/createPage'));
+const PrivacyPolicy = lazy(() => import('pages/privacyPolicy'));
 
 export default function App() {
   return (
