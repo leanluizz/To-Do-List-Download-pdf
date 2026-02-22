@@ -20,6 +20,7 @@ export default function CreateLists() {
   const [lastAddedIndex, setLastAddedIndex] = useState<number | null>(null);
   const [clearingAll, setClearingAll] = useState(false);
   const [deleteLastTick, setDeleteLastTick] = useState(0);
+  
   useEffect(() => {
     const savedTextColor = localStorage.getItem('textColor');
     const savedAlignText = localStorage.getItem('alignText');
