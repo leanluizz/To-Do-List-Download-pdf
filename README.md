@@ -1,6 +1,18 @@
-# to-do-list-download-PDF
+# To-Do List Download PDF
 
-Esse site open-source foi feito na intenção de facilitar uma simples lista, por exemplo caso você queira fazer uma lista de compras ou uma lista de tarefas por exemplo e guardar em algum lugar local do seu dispositivo.
+## 🎯 Objetivo Educacional
+Este projeto open-source foi desenvolvido com o propósito de auxiliar desenvolvedores Front-end a aprenderem e praticarem conceitos fundamentais, tais como:
+- **Estrutura de Pastas**: Organização lógica e escalável de arquivos.
+- **Layout e Design**: Construção de interfaces limpas e responsivas.
+- **Semântica HTML**: Uso correto de tags para acessibilidade e SEO.
+- **Escalabilidade**: Boas práticas para manter o projeto sustentável.
+
+Além do aprendizado, o site facilita a criação de listas simples (como compras ou tarefas) para armazenamento local.
+
+## 🤝 Contribuição e Aprendizado
+Toda crítica construtiva, sugestão de melhoria e compartilhamento de conhecimento são extremamente bem-vindos! Queremos criar um ambiente de aprendizado colaborativo.
+
+**⚠️ Importante**: Para que sua Pull Request (PR) seja aprovada, é **obrigatório** seguir as diretrizes estabelecidas na seção de regras abaixo e no arquivo [RULES.md](./RULES.md). O respeito a esses padrões garante a qualidade e a consistência do código para todos.
 
 ## Clone o projeto ou baixe o zip do repositório 
 
