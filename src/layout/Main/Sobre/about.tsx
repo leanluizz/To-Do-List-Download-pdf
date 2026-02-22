@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal } from 'react-bootstrap';
-import Button from '../../../components/ui/Button/button';
-import Icon from '../../../components/ui/Icon/icon';
+import Button from '../../../components/ui/Button/Button';
+import Icon from '../../../components/ui/Icon/Icon';
 
 export default function About() {
   const [show, setShow] = useState(false);

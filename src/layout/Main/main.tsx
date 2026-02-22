@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import Intro from './Introducao/intro';
-import Explain from './Explicacao/explain';
+import Explain from './Explicacao/Explain';
 import Example from './Explicacao/example';
-import Faq from './Duvidas/faq';
+import Faq from './Duvidas/Faq';
 import About from './Sobre/about';
 import Highlights from './Destaques/highlights';
 import ScrollTopButton from '../../components/ui/ScrollTopButton/scroll-top-button';

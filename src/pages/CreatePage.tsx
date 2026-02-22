@@ -1,7 +1,7 @@
 import CreateLists from '../layout/Feature/createLists';
 import { useNavigate } from 'react-router-dom';
-import Button from '../components/ui/Button/button';
-import Icon from '../components/ui/Icon/icon';
+import Button from '../components/ui/Button/Button';
+import Icon from '../components/ui/Icon/Icon';
 
 export default function CreatePage() {
   const navigate = useNavigate();

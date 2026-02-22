@@ -1,5 +1,5 @@
 import IconButton from '../../../components/ui/IconButton/icon-button';
-import Icon from '../../../components/ui/Icon/icon';
+import Icon from '../../../components/ui/Icon/Icon';
 import 'animate.css';
 import 'animate.css';
 import { ChangeEvent, useEffect, useRef, useState } from 'react';

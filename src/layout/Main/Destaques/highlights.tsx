@@ -1,5 +1,5 @@
-import Icon from '../../../components/ui/Icon/icon';
-import Card from '../../../components/ui/Card/card';
+import Icon from '../../../components/ui/Icon/Icon';
+import Card from '../../../components/ui/Card/Card';
 import IntersectionObserver from '../../../utils/intersectionobserver';
 import 'animate.css';
 

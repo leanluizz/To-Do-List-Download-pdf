@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from '../../../components/ui/Button/button';
-import Icon from '../../../components/ui/Icon/icon';
+import Button from '../../../components/ui/Button/Button';
+import Icon from '../../../components/ui/Icon/Icon';
 import Center from '../images-icons/alinhamento-center.png';
 import Start from '../images-icons/alinhamento-start.png';
 import End from '../images-icons/alinhamento-end.png';
