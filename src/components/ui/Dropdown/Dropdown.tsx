@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, useRef, useState, CSSProperties } from 'react';
-
 export interface DropdownProps {
   title: string;
   icon: ReactNode;
@@ -10,7 +9,6 @@ export interface DropdownProps {
   panelStyle?: CSSProperties;
   buttonTitle?: string;
 }
-
 export default function Dropdown({ title, icon, content, placement = 'bottom', trigger = 'both', className, panelStyle, buttonTitle }: DropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);

@@ -1,4 +1,3 @@
-import React from 'react';
 import ListPreview from '../../Components/listPreview/ListPreview';
 import CreateListButton from '../../Components/createListButton/CreateListButton';
 

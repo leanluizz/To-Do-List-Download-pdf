@@ -1,6 +1,4 @@
 import IconButton from '../../../components/ui/IconButton/IconButton';
-import Icon from '../../../components/ui/Icon/Icon';
-import 'animate.css';
 import 'animate.css';
 import { ChangeEvent, useEffect, useRef, useState } from 'react';
 interface TitleListProps {

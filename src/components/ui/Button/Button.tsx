@@ -1,5 +1,4 @@
 import React from 'react';
-
 type ButtonProps = {
   variant?: string;
   className?: string;
@@ -10,7 +9,6 @@ type ButtonProps = {
   href?: string;
   children: React.ReactNode;
 };
-
 export default function Button({
   variant,
   className,
@@ -24,7 +22,6 @@ export default function Button({
   const base = 'btn';
   const variantClass = variant ? `btn-${variant}` : '';
   const classes = [base, variantClass, className].filter(Boolean).join(' ');
-
   if (href) {
     return (
       <a href={href} className={classes} onClick={onClick}>
@@ -32,7 +29,6 @@ export default function Button({
       </a>
     );
   }
-
   return (
     <button title={title} type={type} className={classes} disabled={disabled} onClick={onClick}>
       {children}

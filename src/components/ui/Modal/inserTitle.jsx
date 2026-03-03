@@ -1,32 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ModalBody } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Example() {
   const [show, setShow] = useState(true);
-  const [value, setValue] = useState('');
-
+  const [value] = useState('');
   const handleClose = () => setShow(false);
-
-  const changeInput = (event) => {
-    setValue(event.target.value);
-  }
-  const handleSubmit = (e) => {
-    localStorage.setItem('tituloNovo', value);
-    handleClose();
-  }
-
   return (
     <>
-      
         <Modal show={show} onHide={handleClose}>
           <Modal.Header className='bg-success bg-gradient' closeButton>
             <Modal.Title className='text-light'>Título da Lista</Modal.Title>
           </Modal.Header>
           <ModalBody className='border border-dark'>
             <input
-             
               type="text"
               value={value}
               className="form-control"
@@ -45,5 +33,4 @@ function Example() {
     </>
   );
 }
-
 export default Example;

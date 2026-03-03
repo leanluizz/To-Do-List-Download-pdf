@@ -2,11 +2,9 @@
   --color-primary: #18b359;
   --color-secondary: #212529;
 }
-
 .text-primary-color { color: var(--color-primary) !important; }
 .bg-primary-color { background-color: var(--color-primary) !important; }
 .border-primary-color { border-color: var(--color-primary) !important; }
-
 .text-secondary-color { color: var(--color-secondary) !important; }
 .bg-secondary-color { background-color: var(--color-secondary) !important; }
 .border-secondary-color { border-color: var(--color-secondary) !important; }

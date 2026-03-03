@@ -1,7 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../assets/styles/variables.css';
-
 export interface CardProps {
   icon: ReactNode;
   title: string;
@@ -13,7 +12,6 @@ export interface CardProps {
   enableHoverZoom?: boolean;
   children?: ReactNode;
 }
-
 export default function Card({ icon, title, description, className, style, animationClass = 'animate__animated animate__fadeInUp', animationDelay, enableHoverZoom = false, children }: CardProps) {
   return (
     <div
@@ -22,7 +20,6 @@ export default function Card({ icon, title, description, className, style, anima
         minHeight: 180, 
         ...(animationDelay ? { animationDelay } : {}), 
         ...(style || {}),
-        // Removida transição inline para evitar conflito
       }}
     >
       {icon && <div className="mb-2 d-inline-flex align-items-center justify-content-start">{icon}</div>}

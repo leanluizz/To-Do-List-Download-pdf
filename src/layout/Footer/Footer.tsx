@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FooterProps } from '../../types';
-
-export default function Footer({icon}: FooterProps){
+export default function Footer(){
     const year = new Date().getFullYear()
     function scrollToSection(section: string) {
         const el = document.getElementById(section);
