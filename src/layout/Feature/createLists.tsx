@@ -13,7 +13,7 @@ export default function CreateLists() {
   const [alignText, setAlignText] = useState('text-start');
   const [fontText, setFontText] = useState('');
   const [background, setBackground] = useState('');
-  const [textSize, setTextSize] = useState(20);
+  const [textSize, setTextSize] = useState<number | string>(20);
   const [title, setTitle] = useState('');
   const [reference, setReference] = useState(false);
   const [valueTitle, setValueTitle] = useState('');
@@ -116,12 +116,40 @@ export default function CreateLists() {
       doc.setTextColor(...rgb);
     };
     applyTextColor();
-    doc.setFontSize(textSize);
+    const pdfFontSize = typeof textSize === 'number' ? textSize : Number(textSize) || 20;
+    doc.setFontSize(pdfFontSize);
+
+    // Mapeamento de fontes
+    let fontName = 'helvetica'; // padrão sans-serif
+    let fontStyle = 'normal';
+
+    switch (fontText) {
+      case 'monospace':
+        fontName = 'courier';
+        break;
+      case 'serif':
+        fontName = 'times';
+        break;
+      case 'cursive':
+      case 'italic':
+        fontName = 'times';
+        fontStyle = 'italic';
+        break;
+      case 'fantasy':
+        fontName = 'courier';
+        fontStyle = 'bold'; // Simulando fantasy
+        break;
+      default:
+        fontName = 'helvetica';
+    }
+    
+    doc.setFont(fontName, fontStyle);
+
     if (title) {
       doc.text(title, pageWidth / 2, 15, { align: 'center' });
     }
     items.forEach((item, index) => {
-      const yPos = 30 + index * (textSize < 50 ? 15 : 25);
+      const yPos = 30 + index * (pdfFontSize < 50 ? 15 : 25);
       const alignOption =
         alignText === 'text-center'
           ? 'center'
@@ -139,7 +167,12 @@ export default function CreateLists() {
     doc.save('lista-de-itens.pdf');
   };
   const changeSize = (event: any) => {
-    const newSize = Number(event.target.value);
+    const val = event.target.value;
+    if (val === '') {
+      setTextSize('');
+      return;
+    }
+    const newSize = Number(val);
     if (newSize > 0 && newSize <= 50) {
       setTextSize(newSize);
     }

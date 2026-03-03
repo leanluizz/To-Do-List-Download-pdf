@@ -12,7 +12,7 @@ interface TopToolbarProps {
   changeAlign: (v: string) => void;
   changeBackground: (e: ChangeEvent<HTMLInputElement>) => void;
   generatePDF: () => void;
-  textSize: number;
+  textSize: number | string;
   fontText: string;
   alignText: string;
   textColor: string;
@@ -68,7 +68,14 @@ export default function TopToolbar({
           placement={'bottom'}
           content={
             <div className="d-flex flex-column gap-2">
-              <input onChange={changeSize} placeholder="0" type="number" min={10} max={50} value={textSize} className="form-control" style={{ borderRadius: 6 }} />
+              <input onChange={(e) => {
+                const val = e.target.value;
+                if (val === '') {
+                  changeSize(e);
+                  return;
+                }
+                changeSize(e);
+              }} placeholder="0" type="number" min={10} max={50} value={textSize} className="form-control" style={{ borderRadius: 6 }} />
               <span className="text-muted">Máximo: 50</span>
             </div>
           }

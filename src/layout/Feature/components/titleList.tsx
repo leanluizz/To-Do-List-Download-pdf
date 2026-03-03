@@ -18,7 +18,7 @@ interface TitleListProps {
   saveEdit: () => void;
   deleteItem: (index: number) => void;
   fontText: string;
-  textSize: number;
+  textSize: number | string;
   alignText: string;
   lastAddedIndex: number | null;
   clearAddedIndex: () => void;
@@ -99,8 +99,8 @@ export default function TitleList({
             </div>
           </form>
         ) : (
-          <div className="position-sticky top-0 bg-white d-flex align-items-center gap-2 w-100 mb-5" style={{ zIndex: 1 }}>
-            <h1 className={`${textColor} flex-grow-1`}>{title}</h1>
+          <div className="position-sticky top-0 bg-transparent d-flex align-items-center gap-2 w-100 mb-5" style={{ zIndex: 1 }}>
+            <h1 className={`${textColor} flex-grow-1 text-center`}>{title}</h1>
             <IconButton onClick={() => setReference(false)} variant="success" name="PencilSquareIcon" style="solid" size={20} className="flex-shrink-0" ariaLabel="Editar título" />
           </div>
         )}
@@ -136,7 +136,7 @@ export default function TitleList({
                 style={{
                   fontFamily: fontText,
                   fontStyle: fontText,
-                  fontSize: `${textSize}px`,
+                  fontSize: typeof textSize === 'number' ? `${textSize}px` : `${Number(textSize) || 20}px`,
                   wordBreak: 'break-word',
                   overflowWrap: 'break-word',
                   whiteSpace: 'normal',

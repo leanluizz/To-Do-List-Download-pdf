@@ -9,10 +9,10 @@ import useWindowsDimensions from '../../../hooks/useWindowsDimensions';
 
 interface MobileMenuProps {
   textColor: string;
-  textSize: number;
+  textSize: number | string;
   fontText: string;
   changeColor: (v: string) => void;
-  setTextSize: (v: number) => void;
+  setTextSize: (v: number | string) => void;
   changeFont: (v: string) => void;
   changeAlign: (v: string) => void;
   changeBackground: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -79,7 +79,12 @@ const MobileMenu = ({
         <div className="d-flex flex-column gap-2">
           <input
             onChange={(e) => {
-              const newSize = Number(e.target.value);
+              const val = e.target.value;
+              if (val === '') {
+                setTextSize('');
+                return;
+              }
+              const newSize = Number(val);
               if (newSize > 0 && newSize <= 50) {
                 setTextSize(newSize);
               }
